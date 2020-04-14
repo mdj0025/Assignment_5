@@ -48,15 +48,88 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addBtn" />
 
+    <LinearLayout
+        android:id="@+id/minFilterLinearLayout"
+        android:layout_width="393dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transactionHistoryLbl">
+
+        <EditText
+            android:id="@+id/minDateFilter"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:hint="Minimum Date Filter.."
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/minAmountFilter"
+            android:layout_width="153dp"
+            android:layout_height="match_parent"
+            android:hint="Minimum Amount Filter.."
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/maxFilterLinearLayout"
+        android:layout_width="393dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/minFilterLinearLayout">
+
+        <EditText
+            android:id="@+id/maxDateFilter"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:hint="Maximum Date Filter.."
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/maxAmountFilter"
+            android:layout_width="152dp"
+            android:layout_height="match_parent"
+            android:hint="Maximum Amount Filter.."
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/filterBtn"
+        android:layout_width="76dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="167dp"
+        android:layout_marginLeft="167dp"
+        android:layout_marginEnd="168dp"
+        android:layout_marginRight="168dp"
+        android:text="FILTER"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/maxFilterLinearLayout" />
+
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="390dp"
-        android:layout_height="378dp"
+        android:layout_width="369dp"
+        android:layout_height="287dp"
         android:layout_marginEnd="11dp"
         android:layout_marginRight="11dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/transactionHistoryLbl">
+        app:layout_constraintTop_toBottomOf="@+id/filterBtn">
 
         <TableLayout
             android:id="@+id/transactionTable"
@@ -72,8 +145,8 @@
                     android:id="@+id/dateColumn"
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
-                    android:text="Date"
-                    android:background="@color/colorPrimary">
+                    android:background="@color/colorPrimary"
+                    android:text="Date">
 
                 </TextView>
 
@@ -81,8 +154,8 @@
                     android:id="@+id/amountColumn"
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
-                    android:text="Amount"
-                    android:background="@color/colorPrimary">
+                    android:background="@color/colorPrimary"
+                    android:text="Amount">
 
                 </TextView>
 
@@ -90,8 +163,8 @@
                     android:id="@+id/reasonColumn"
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
-                    android:text="Reason"
-                    android:background="@color/colorPrimary">
+                    android:background="@color/colorPrimary"
+                    android:text="Reason">
 
                 </TextView>
             </TableRow>
@@ -169,10 +242,13 @@
         android:id="@+id/addBtn"
         android:layout_width="79dp"
         android:layout_height="36dp"
-        android:layout_marginStart="172dp"
-        android:layout_marginLeft="172dp"
+        android:layout_marginStart="166dp"
+        android:layout_marginLeft="166dp"
         android:layout_marginTop="4dp"
+        android:layout_marginEnd="166dp"
+        android:layout_marginRight="166dp"
         android:text="Submit"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/valueLinearLayout" />
 
